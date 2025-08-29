@@ -1,0 +1,37 @@
+<!-- OnDoc24X7/templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard – OnDoc24X7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <h1 class="logo">OnDoc24X7</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/appointment">Book Appointment</a></li>
+          <li><a href="/symptom">Predict Disease</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <h2>Welcome, {{ username }} 🎉</h2>
+    <p>Here you can manage your health services:</p>
+    <div>
+      <a href="/appointment" class="btn">Book an Appointment</a>
+      <a href="/symptom" class="btn">Predict Disease</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 OnDoc24X7. All rights reserved.</p>
+  </footer>
+</body>
+</html>
