@@ -1,0 +1,40 @@
+<!-- OnDoc24X7/templates/appointment.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Appointment – OnDoc24X7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Book Your Appointment</h1>
+  </header>
+
+  <main>
+    <form action="/appointment" method="POST">
+      <label>Full Name:</label><br>
+      <input type="text" name="name" required><br><br>
+
+      <label>Email:</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <label>Preferred Doctor:</label><br>
+      <input type="text" name="doctor" required><br><br>
+
+      <label>Date of Appointment:</label><br>
+      <input type="date" name="date" required><br><br>
+
+      <label>Time Slot:</label><br>
+      <select name="time_slot" required>
+        <option value="10:00 AM">10:00 AM</option>
+        <option value="11:00 AM">11:00 AM</option>
+        <option value="12:00 PM">12:00 PM</option>
+        <option value="02:00 PM">02:00 PM</option>
+        <option value="03:00 PM">03:00 PM</option>
+      </select><br><br>
+
+      <button type="submit">Confirm Appointment</button>
+    </form>
+  </main>
+</body>
+</html>

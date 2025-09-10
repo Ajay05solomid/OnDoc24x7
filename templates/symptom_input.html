@@ -1,0 +1,48 @@
+<!-- OnDoc24X7/templates/symptom_input.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Symptom Input – OnDoc24X7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Enter Your Symptoms – OnDoc24X7</h1>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <form action="/predict" method="POST">
+        <label>Do you have Fever?</label>
+        <select name="fever" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label>Do you have Cough?</label>
+        <select name="cough" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label>Do you have Body Pain?</label>
+        <select name="body_pain" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label>Do you feel Fatigue?</label>
+        <select name="fatigue" required>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+
+        <label>Enter your Age:</label>
+        <input type="number" name="age" min="0" required>
+
+        <button type="submit">Predict Disease</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

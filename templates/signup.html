@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup - OnDoc24X7</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>OnDoc24X7</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/login">Login</a>
+        </nav>
+    </header>
+    <main class="form-container">
+        <h2>Create Account</h2>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Enter Username" required>
+            <input type="email" name="email" placeholder="Enter Email" required>
+            <input type="password" name="password" placeholder="Enter Password" required>
+            <button type="submit">Signup</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a></p>
+    </main>
+</body>
+</html>

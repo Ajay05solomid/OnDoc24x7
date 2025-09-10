@@ -1,0 +1,41 @@
+<!-- OnDoc24X7/templates/result.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result – OnDoc24X7</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <div class="logo">OnDoc24X7</div>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/symptom">Predict Disease</a></li>
+        <li><a href="/appointment">Book Appointment</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h2>Prediction Result</h2>
+      <p><strong>Predicted Disease:</strong></p>
+      <p style="font-size: 20px; font-weight: bold; color: #0d6efd;">{{ prediction }}</p>
+
+      <h3>Recommended Doctors:</h3>
+      <ul style="text-align: left;">
+        {% for doctor in doctors %}
+          <li>{{ doctor }}</li>
+        {% endfor %}
+      </ul>
+
+      <a href="/appointment" class="btn">Book Appointment</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 OnDoc24X7. All rights reserved.</p>
+  </footer>
+</body>
+</html>
